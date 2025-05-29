@@ -1,20 +1,21 @@
-    local plrs = game:GetService("Players")
-    local space = game:GetService("Workspace")
-    local tps = game:GetService("TeleportService")
-    local asset = game:GetService("AnalyticsService")
-    local market = game:GetService("MarketplaceService")
-    local http = game:GetService("HttpService")
-    local replicated = game:GetService("ReplicatedStorage")
-    local replicatedfirst = game:GetService("ReplicatedFirst")
-    local textservice = game:GetService("TextChatService")
-    local TextChatService = game:GetService("TextChatService")
-
-    plr = plrs.LocalPlayer
-    userid = plr.UserId
-    char = plr.Character
-    hum = char:FindFirstChild("Humanoid")
-    hrp = char:WaitForChild("HumanoidRootPart", 3)
-
+    function get()
+        local plrs = game:GetService("Players")
+        local space = game:GetService("Workspace")
+        local tps = game:GetService("TeleportService")
+        local asset = game:GetService("AnalyticsService")
+        local market = game:GetService("MarketplaceService")
+        local http = game:GetService("HttpService")
+        local replicated = game:GetService("ReplicatedStorage")
+        local replicatedfirst = game:GetService("ReplicatedFirst")
+        local textservice = game:GetService("TextChatService")
+        local TextChatService = game:GetService("TextChatService")
+        plr = plrs.LocalPlayer
+        userid = plr.UserId
+        char = plr.Character
+        hum = char:FindFirstChild("Humanoid")
+        hrp = char:WaitForChild("HumanoidRootPart", 3)
+    end
+    get()
     getgenv().output = function(method, output)
     local sen = "[+] " .. tostring(output)
         if method == "er" then
